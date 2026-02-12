@@ -1,6 +1,6 @@
 /* ============================================
    PowerLine Electrical Wellington
-   Premium Dark Electric Theme
+   Premium Dark Electric Theme — Multi-Page
    ============================================ */
 
 /* ---------- CSS Variables ---------- */
@@ -54,6 +54,18 @@ input, textarea, select { font-family: inherit; }
     background-clip: text;
 }
 .section { padding: 100px 0; }
+
+/* ---------- Page Transition ---------- */
+.page-transition {
+    position: fixed; inset: 0; z-index: 99999;
+    background: var(--bg-dark);
+    pointer-events: none;
+    animation: pageFadeOut .4s ease forwards;
+}
+@keyframes pageFadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
 
 /* ---------- Grain Overlay ---------- */
 .grain-overlay {
@@ -195,6 +207,31 @@ input, textarea, select { font-family: inherit; }
     .nav__phone-mobile { display: flex; }
 }
 
+/* ---------- PAGE HEADER (inner pages) ---------- */
+.page-header {
+    position: relative; padding: 160px 0 80px;
+    background: var(--bg-dark); overflow: hidden;
+}
+.page-header__overlay {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 80%, rgba(251,191,36,.05) 0%, transparent 60%);
+}
+.page-header__content { position: relative; z-index: 2; }
+.page-header__title {
+    font-family: var(--font-heading); font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700; line-height: 1.1; margin-bottom: 12px;
+}
+.page-header__subtitle { color: var(--text-secondary); font-size: 1.15rem; max-width: 600px; }
+
+/* ---------- Breadcrumb ---------- */
+.breadcrumb {
+    display: flex; align-items: center; gap: 8px;
+    font-size: .85rem; color: var(--text-dim); margin-bottom: 16px;
+}
+.breadcrumb a { color: var(--accent); transition: var(--transition); }
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb__sep { color: var(--text-dim); }
+
 /* ---------- HERO ---------- */
 .hero {
     position: relative; min-height: 100vh; display: flex; align-items: center;
@@ -284,6 +321,9 @@ input, textarea, select { font-family: inherit; }
     display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
 }
+.services__grid--home {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
 .service-card {
     background: var(--bg-glass); border: 1px solid var(--border-glass);
     border-radius: var(--radius-lg); padding: 32px 24px;
@@ -342,6 +382,7 @@ input, textarea, select { font-family: inherit; }
     display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
 }
+.trust__badges--expanded .trust-badge p { font-size: .9rem; line-height: 1.6; }
 .trust-badge {
     text-align: center; padding: 28px 20px;
     background: var(--bg-glass); border: 1px solid var(--border-glass);
@@ -443,6 +484,30 @@ input, textarea, select { font-family: inherit; }
 .review-card__author strong { display: block; font-size: .9rem; }
 .review-card__author span { color: var(--text-dim); font-size: .8rem; }
 
+/* Static review cards (grid layout for testimonials page & home) */
+.reviews__grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 24px;
+}
+.reviews__grid--home {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+.review-card-static {
+    background: var(--bg-glass); border: 1px solid var(--border-glass);
+    border-radius: var(--radius-lg); padding: 32px;
+    backdrop-filter: blur(10px); transition: var(--transition);
+    display: flex; flex-direction: column;
+}
+.review-card-static:hover {
+    transform: translateY(-4px); border-color: var(--accent-glow);
+    box-shadow: 0 8px 40px rgba(251, 191, 36, .06);
+}
+.review-card-static .review-card__text {
+    background: none; border: none; padding: 0;
+    margin-bottom: 20px; flex: 1;
+}
+.review-card-static .review-card__stars { margin-bottom: 16px; }
+
 .reviews__nav { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 32px; }
 .reviews__btn {
     width: 44px; height: 44px; border-radius: 50%;
@@ -457,6 +522,48 @@ input, textarea, select { font-family: inherit; }
     transition: var(--transition); cursor: pointer;
 }
 .reviews__dot.active { background: var(--accent); width: 24px; border-radius: 4px; }
+
+/* ---------- AREAS ---------- */
+.areas { background: var(--bg-primary); }
+.areas__region { margin-bottom: 48px; }
+.areas__region:last-of-type { margin-bottom: 48px; }
+.areas__region-title {
+    font-family: var(--font-heading); font-size: 1.3rem; font-weight: 600;
+    margin-bottom: 20px; color: var(--text-primary);
+}
+.areas__grid {
+    display: flex; flex-wrap: wrap; gap: 10px;
+}
+.area-tag {
+    background: var(--bg-glass); border: 1px solid var(--border-glass);
+    border-radius: 50px; padding: 10px 20px; font-size: .9rem;
+    color: var(--text-secondary); transition: var(--transition);
+}
+.area-tag:hover {
+    border-color: var(--accent); color: var(--accent);
+    background: rgba(251, 191, 36, .05);
+}
+.areas__map { margin-top: 40px; }
+
+/* ---------- CTA BANNER ---------- */
+.cta-banner { background: var(--bg-secondary); padding: 80px 0; }
+.cta-banner__inner {
+    text-align: center;
+    background: var(--bg-glass); border: 1px solid var(--border-glass);
+    border-radius: var(--radius-lg); padding: 60px 40px;
+    backdrop-filter: blur(10px);
+}
+.cta-banner__title {
+    font-family: var(--font-heading); font-size: clamp(2rem, 5vw, 2.8rem);
+    font-weight: 700; margin-bottom: 16px;
+}
+.cta-banner__text {
+    color: var(--text-secondary); font-size: 1.1rem;
+    max-width: 500px; margin: 0 auto 32px;
+}
+.cta-banner__buttons {
+    display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+}
 
 /* ---------- CONTACT ---------- */
 .contact { background: var(--bg-secondary); }
@@ -571,4 +678,7 @@ input, textarea, select { font-family: inherit; }
     .services__grid { grid-template-columns: 1fr; }
     .trust__stats { grid-template-columns: 1fr 1fr; }
     .process__line { left: 28px; }
+    .reviews__grid { grid-template-columns: 1fr; }
+    .cta-banner__inner { padding: 40px 24px; }
+    .page-header { padding: 140px 0 60px; }
 }

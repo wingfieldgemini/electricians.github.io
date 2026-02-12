@@ -1,6 +1,6 @@
 /* ============================================
    PowerLine Electrical Wellington
-   Main JavaScript
+   Main JavaScript — Multi-Page
    ============================================ */
 
 (function () {
@@ -26,13 +26,10 @@
     const nav = document.getElementById('nav');
     const hamburger = document.getElementById('navHamburger');
     const navMenu = document.getElementById('navMenu');
-    const navLinks = document.querySelectorAll('.nav__link');
 
-    // Scroll effects
-    let lastScroll = 0;
+    // Scroll effects — sticky nav bg
     window.addEventListener('scroll', () => {
         nav.classList.toggle('scrolled', window.scrollY > 50);
-        lastScroll = window.scrollY;
     }, { passive: true });
 
     // Hamburger toggle
@@ -44,23 +41,11 @@
     });
 
     // Close mobile menu on link click
-    navLinks.forEach(link => link.addEventListener('click', () => {
+    document.querySelectorAll('.nav__link').forEach(link => link.addEventListener('click', () => {
         hamburger?.classList.remove('active');
         navMenu?.classList.remove('open');
         document.body.style.overflow = '';
     }));
-
-    // Active link on scroll
-    const sections = document.querySelectorAll('section[id]');
-    function updateActiveLink() {
-        const scrollY = window.scrollY + 120;
-        sections.forEach(s => {
-            const top = s.offsetTop, h = s.offsetHeight, id = s.getAttribute('id');
-            const link = document.querySelector(`.nav__link[href="#${id}"]`);
-            if (link) link.classList.toggle('active', scrollY >= top && scrollY < top + h);
-        });
-    }
-    window.addEventListener('scroll', updateActiveLink, { passive: true });
 
     /* ---------- Hero Canvas — Electric Sparks ---------- */
     const canvas = document.getElementById('heroCanvas');
@@ -75,7 +60,6 @@
         resize();
         window.addEventListener('resize', resize);
 
-        // Floating particles
         class Particle {
             constructor() { this.reset(); }
             reset() {
@@ -85,7 +69,6 @@
                 this.vy = (Math.random() - 0.5) * 0.4;
                 this.r = Math.random() * 2 + 0.5;
                 this.alpha = Math.random() * 0.5 + 0.1;
-                this.life = 1;
             }
             update() {
                 this.x += this.vx; this.y += this.vy;
@@ -99,11 +82,9 @@
             }
         }
 
-        // Lightning bolt
         class Bolt {
             constructor() {
                 this.x = Math.random() * w;
-                this.y = 0;
                 this.segments = [];
                 let x = this.x, y = 0;
                 const end = h * (0.3 + Math.random() * 0.5);
@@ -130,14 +111,11 @@
             }
         }
 
-        // Init particles
         const count = Math.min(80, Math.floor(w * h / 10000));
         for (let i = 0; i < count; i++) particles.push(new Particle());
 
         function animate() {
             ctx.clearRect(0, 0, w, h);
-
-            // Draw connection lines
             for (let i = 0; i < particles.length; i++) {
                 for (let j = i + 1; j < particles.length; j++) {
                     const dx = particles[i].x - particles[j].x;
@@ -153,14 +131,10 @@
                     }
                 }
             }
-
             particles.forEach(p => { p.update(); p.draw(); });
-
-            // Random bolts
             if (Math.random() < 0.008) bolts.push(new Bolt());
             bolts.forEach(b => { b.update(); b.draw(); });
             bolts = bolts.filter(b => b.alpha > 0);
-
             requestAnimationFrame(animate);
         }
         animate();
@@ -190,7 +164,7 @@
             const start = performance.now();
             function tick(now) {
                 const progress = Math.min((now - start) / duration, 1);
-                const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+                const eased = 1 - Math.pow(1 - progress, 3);
                 const current = eased * target;
                 el.textContent = decimals ? current.toFixed(decimals) : Math.floor(current).toLocaleString();
                 if (progress < 1) requestAnimationFrame(tick);
@@ -201,7 +175,7 @@
     }, { threshold: 0.5 });
     counters.forEach(el => counterObs.observe(el));
 
-    /* ---------- Reviews Carousel ---------- */
+    /* ---------- Reviews Carousel (if present) ---------- */
     const track = document.getElementById('reviewsTrack');
     const prevBtn = document.getElementById('reviewPrev');
     const nextBtn = document.getElementById('reviewNext');
@@ -254,7 +228,6 @@
         nextBtn?.addEventListener('click', () => goTo(current >= maxIndex() ? 0 : current + 1));
         window.addEventListener('resize', init);
 
-        // Touch/swipe
         let tx = 0, isDragging = false;
         track.addEventListener('touchstart', e => { tx = e.touches[0].clientX; isDragging = true; }, { passive: true });
         track.addEventListener('touchend', e => {
@@ -284,7 +257,7 @@
         }, 3000);
     });
 
-    /* ---------- Smooth scroll for anchors ---------- */
+    /* ---------- Smooth scroll for same-page anchors ---------- */
     document.querySelectorAll('a[href^="#"]').forEach(a => {
         a.addEventListener('click', e => {
             const target = document.querySelector(a.getAttribute('href'));

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PowerLine Electrical Wellington — Wellington's Trusted Sparky</title>
-    <meta name="description" content="PowerLine Electrical Wellington — Licensed electricians serving Wellington & the Hutt Valley. Residential, commercial, EV chargers, 24/7 emergency callout. EWRB registered, Master Electricians NZ member.">
+    <title>About Us — PowerLine Electrical Wellington</title>
+    <meta name="description" content="Learn about PowerLine Electrical Wellington — family-owned, EWRB registered electricians serving Wellington & the Hutt Valley for 15+ years.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -25,8 +25,8 @@
                 <span class="nav__logo-text">PowerLine<span class="text-accent"> Electrical</span></span>
             </a>
             <ul class="nav__menu" id="navMenu">
-                <li><a href="index.html" class="nav__link active">Home</a></li>
-                <li><a href="about.html" class="nav__link">About</a></li>
+                <li><a href="index.html" class="nav__link">Home</a></li>
+                <li><a href="about.html" class="nav__link active">About</a></li>
                 <li><a href="services.html" class="nav__link">Services</a></li>
                 <li><a href="areas.html" class="nav__link">Areas</a></li>
                 <li><a href="testimonials.html" class="nav__link">Reviews</a></li>
@@ -47,49 +47,17 @@
         </div>
     </nav>
 
-    <!-- ========== HERO ========== -->
-    <section class="hero" id="home">
-        <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
-        <div class="hero__overlay"></div>
-        <div class="hero__content container">
-            <div class="hero__badge reveal-up">
-                <span class="hero__badge-dot"></span>
-                EWRB Registered &bull; Master Electricians NZ
-            </div>
-            <h1 class="hero__title">
-                <span class="reveal-up" style="--delay:.1s">Wellington's</span>
-                <span class="reveal-up text-gradient" style="--delay:.2s">Trusted Sparky</span>
-            </h1>
-            <p class="hero__subtitle reveal-up" style="--delay:.35s">Available 24/7 — Residential &amp; Commercial Electrical Services across Wellington &amp; the Hutt Valley</p>
-            <div class="hero__ctas reveal-up" style="--delay:.5s">
-                <a href="contact.html" class="btn btn--primary btn--lg">
-                    Get a Free Quote
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
-                <a href="tel:+6445550112" class="btn btn--emergency btn--lg">
-                    <span class="btn__pulse"></span>
-                    24/7 Emergency — Call Now
-                </a>
-            </div>
-            <div class="hero__trust reveal-up" style="--delay:.65s">
-                <div class="hero__trust-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FBBF24" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    Fully Insured
-                </div>
-                <div class="hero__trust-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FBBF24" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
-                    Safety Cert Every Job
-                </div>
-                <div class="hero__trust-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FBBF24" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    4.8★ Google Rating
-                </div>
-            </div>
-        </div>
-        <div class="hero__scroll-indicator" aria-hidden="true">
-            <div class="hero__scroll-mouse">
-                <div class="hero__scroll-wheel"></div>
-            </div>
+    <!-- ========== PAGE HEADER ========== -->
+    <section class="page-header">
+        <div class="page-header__overlay"></div>
+        <div class="container page-header__content">
+            <nav class="breadcrumb reveal-up" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb__sep">/</span>
+                <span>About Us</span>
+            </nav>
+            <h1 class="page-header__title reveal-up" style="--delay:.1s">About <span class="text-gradient">PowerLine</span></h1>
+            <p class="page-header__subtitle reveal-up" style="--delay:.2s">Family-owned. Wellington-born. Trusted for 15+ years.</p>
         </div>
     </section>
 
@@ -107,47 +75,30 @@
         </div>
     </section>
 
-    <!-- Angular divider -->
-    <div class="divider divider--down" aria-hidden="true">
-        <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,0 L720,60 L1440,0 L1440,60 L0,60Z" fill="var(--bg-primary)"/></svg>
-    </div>
-
-    <!-- ========== SERVICES HIGHLIGHTS ========== -->
-    <section class="services section">
+    <!-- ========== ABOUT ========== -->
+    <section class="about section">
         <div class="container">
-            <div class="section__header">
-                <span class="section__label reveal-up">What We Do</span>
-                <h2 class="section__title reveal-up">Our <span class="text-gradient">Services</span></h2>
-                <p class="section__subtitle reveal-up">From simple repairs to full commercial fit-outs — we've got Wellington covered.</p>
-            </div>
-            <div class="services__grid services__grid--home">
-                <div class="service-card reveal-up" style="--delay:.05s">
-                    <div class="service-card__icon">🏠</div>
-                    <h3 class="service-card__title">Residential Electrical</h3>
-                    <p class="service-card__desc">Complete home electrical services — rewires, new points, lighting, and fault finding for Wellington homes.</p>
+            <div class="about__grid">
+                <div class="about__content">
+                    <span class="section__label reveal-up">Our Story</span>
+                    <h2 class="section__title reveal-up">Your Local <span class="text-gradient">Wellington Sparky</span></h2>
+                    <p class="about__text reveal-up">PowerLine Electrical is a family-owned business proudly serving Wellington and the Hutt Valley for over 15 years. Founded by Dave Mitchell, a born-and-bred Wellingtonian, we've built our reputation on honest work, fair pricing, and turning up when we say we will.</p>
+                    <p class="about__text reveal-up">We're not a faceless corporation — we're your neighbours. From a simple plug installation to a full commercial fit-out, every job gets the same attention to detail and the same commitment to safety. That's our promise.</p>
+                    <div class="about__registrations reveal-up">
+                        <div class="about__reg">
+                            <strong>EWRB Registration:</strong> #12345
+                        </div>
+                        <div class="about__reg">
+                            <strong>Master Electricians NZ</strong> Member
+                        </div>
+                    </div>
                 </div>
-                <div class="service-card reveal-up" style="--delay:.1s">
-                    <div class="service-card__icon">🏢</div>
-                    <h3 class="service-card__title">Commercial Electrical</h3>
-                    <p class="service-card__desc">Office fit-outs, retail lighting, data cabling, and ongoing maintenance contracts for businesses.</p>
+                <div class="about__image reveal-up">
+                    <div class="about__image-placeholder">
+                        <div class="about__image-icon">⚡</div>
+                        <span>Team Photo</span>
+                    </div>
                 </div>
-                <div class="service-card reveal-up" style="--delay:.15s">
-                    <div class="service-card__icon">🔌</div>
-                    <h3 class="service-card__title">EV Charger Installation</h3>
-                    <p class="service-card__desc">Future-proof your home or business with dedicated EV charging stations. All major brands installed.</p>
-                </div>
-                <div class="service-card service-card--emergency reveal-up" style="--delay:.2s">
-                    <div class="service-card__icon">🚨</div>
-                    <h3 class="service-card__title">Emergency Callout 24/7</h3>
-                    <p class="service-card__desc">Power outage? Sparking outlet? Smell burning? Don't wait — call us any time, day or night.</p>
-                    <a href="tel:+6445550112" class="service-card__cta">Call Now →</a>
-                </div>
-            </div>
-            <div class="section__cta reveal-up" style="text-align:center; margin-top:40px;">
-                <a href="services.html" class="btn btn--primary btn--lg">
-                    View All Services
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
             </div>
         </div>
     </section>
@@ -157,7 +108,7 @@
         <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,60 L720,0 L1440,60 L1440,0 L0,0Z" fill="var(--bg-primary)"/></svg>
     </div>
 
-    <!-- ========== STATS ========== -->
+    <!-- ========== WHY CHOOSE US ========== -->
     <section class="trust section">
         <div class="container">
             <div class="section__header">
@@ -182,72 +133,106 @@
                     <span class="stat-card__label">Emergency Service</span>
                 </div>
             </div>
-            <div class="trust__badges reveal-up">
+            <div class="trust__badges trust__badges--expanded reveal-up">
                 <div class="trust-badge">
                     <div class="trust-badge__icon">🛡️</div>
                     <h4>EWRB Registered</h4>
-                    <p>Licensed with the Electrical Workers Registration Board of New Zealand</p>
+                    <p>Licensed with the Electrical Workers Registration Board of New Zealand. Every electrician on our team holds a current practising licence — your guarantee that the work is done to the highest standard and meets all NZ regulatory requirements.</p>
                 </div>
                 <div class="trust-badge">
                     <div class="trust-badge__icon">🏆</div>
                     <h4>Master Electricians NZ</h4>
-                    <p>Proud member — your guarantee of quality and professionalism</p>
+                    <p>As proud members of Master Electricians New Zealand, we adhere to a strict code of practice. This membership means independent oversight, guaranteed workmanship, and access to a disputes resolution process if you ever need it.</p>
                 </div>
                 <div class="trust-badge">
                     <div class="trust-badge__icon">📋</div>
-                    <h4>Safety Certificate</h4>
-                    <p>Electrical safety certificate issued on every single job we complete</p>
+                    <h4>Safety Certificate Every Job</h4>
+                    <p>Every job we complete comes with an electrical safety certificate — it's not optional, it's how we operate. This certificate confirms the work has been tested and is safe and compliant with New Zealand electrical regulations.</p>
                 </div>
                 <div class="trust-badge">
                     <div class="trust-badge__icon">✅</div>
                     <h4>Fully Insured</h4>
-                    <p>Full public liability and professional indemnity insurance coverage</p>
+                    <p>We carry full public liability insurance and professional indemnity coverage. This protects you, your property, and our team on every single job. We can provide certificates of currency on request.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Divider -->
+    <!-- ========== TEAM ========== -->
+    <section class="about section" style="padding-top:0;">
+        <div class="container">
+            <div class="about__team">
+                <h3 class="about__team-title reveal-up">Meet the <span class="text-gradient">Team</span></h3>
+                <div class="about__team-grid">
+                    <div class="team-card reveal-up" style="--delay:.05s">
+                        <div class="team-card__avatar">DM</div>
+                        <h4 class="team-card__name">Dave Mitchell</h4>
+                        <span class="team-card__role">Founder & Master Electrician</span>
+                        <p class="team-card__bio">15+ years in the trade. EWRB registered. Specialises in commercial fit-outs and switchboard upgrades.</p>
+                    </div>
+                    <div class="team-card reveal-up" style="--delay:.15s">
+                        <div class="team-card__avatar">SR</div>
+                        <h4 class="team-card__name">Sarah Roberts</h4>
+                        <span class="team-card__role">Senior Electrician</span>
+                        <p class="team-card__bio">10 years experience. EV charger specialist and LED lighting expert. EWRB registered.</p>
+                    </div>
+                    <div class="team-card reveal-up" style="--delay:.25s">
+                        <div class="team-card__avatar">JT</div>
+                        <h4 class="team-card__name">Jake Thompson</h4>
+                        <span class="team-card__role">Electrician</span>
+                        <p class="team-card__bio">Residential specialist. From rewires to smart home setups, Jake's got your home covered.</p>
+                    </div>
+                    <div class="team-card reveal-up" style="--delay:.35s">
+                        <div class="team-card__avatar">LM</div>
+                        <h4 class="team-card__name">Lisa Mitchell</h4>
+                        <span class="team-card__role">Office Manager</span>
+                        <p class="team-card__bio">Keeps everything running smoothly. Your first point of contact for bookings and quotes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== HOW IT WORKS ========== -->
     <div class="divider divider--down" aria-hidden="true">
         <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,0 L720,60 L1440,0 L1440,60 L0,60Z" fill="var(--bg-secondary)"/></svg>
     </div>
-
-    <!-- ========== 2 TESTIMONIALS ========== -->
-    <section class="reviews section">
+    <section class="process section">
         <div class="container">
             <div class="section__header">
-                <span class="section__label reveal-up">Testimonials</span>
-                <h2 class="section__title reveal-up">What Our <span class="text-gradient">Customers Say</span></h2>
+                <span class="section__label reveal-up">Simple Process</span>
+                <h2 class="section__title reveal-up">How It <span class="text-gradient">Works</span></h2>
             </div>
-            <div class="reviews__grid reviews__grid--home">
-                <div class="review-card-static reveal-up" style="--delay:.05s">
-                    <div class="review-card__stars">★★★★★</div>
-                    <p class="review-card__text">"Had a power outage at 11pm on a Friday night. Dave was there within 40 minutes and had everything sorted. Absolute legend. Can't recommend PowerLine enough."</p>
-                    <div class="review-card__author">
-                        <div class="review-card__avatar">MJ</div>
-                        <div>
-                            <strong>Mike Johnson</strong>
-                            <span>Karori, Wellington</span>
-                        </div>
+            <div class="process__timeline">
+                <div class="process__line" aria-hidden="true"></div>
+                <div class="process-step reveal-up" style="--delay:.05s">
+                    <div class="process-step__number">01</div>
+                    <div class="process-step__content">
+                        <h3>Call or Book Online</h3>
+                        <p>Give us a call or fill out the quote form. Tell us what you need and we'll take it from there.</p>
                     </div>
                 </div>
-                <div class="review-card-static reveal-up" style="--delay:.15s">
-                    <div class="review-card__stars">★★★★★</div>
-                    <p class="review-card__text">"PowerLine rewired our entire 1920s villa in Thorndon. Neat work, on time, and Dave explained everything clearly. The safety cert gave us real peace of mind."</p>
-                    <div class="review-card__author">
-                        <div class="review-card__avatar">KW</div>
-                        <div>
-                            <strong>Karen Williams</strong>
-                            <span>Thorndon, Wellington</span>
-                        </div>
+                <div class="process-step reveal-up" style="--delay:.15s">
+                    <div class="process-step__number">02</div>
+                    <div class="process-step__content">
+                        <h3>Free Quote & Assessment</h3>
+                        <p>We'll assess the job and provide a clear, upfront quote — no hidden costs, no surprises.</p>
                     </div>
                 </div>
-            </div>
-            <div class="section__cta reveal-up" style="text-align:center; margin-top:40px;">
-                <a href="testimonials.html" class="btn btn--primary btn--lg">
-                    Read All Reviews
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
+                <div class="process-step reveal-up" style="--delay:.25s">
+                    <div class="process-step__number">03</div>
+                    <div class="process-step__content">
+                        <h3>Professional Installation</h3>
+                        <p>Our qualified sparkies get the job done right — on time, on budget, with minimal disruption.</p>
+                    </div>
+                </div>
+                <div class="process-step reveal-up" style="--delay:.35s">
+                    <div class="process-step__number">04</div>
+                    <div class="process-step__content">
+                        <h3>Safety Certificate & Guarantee</h3>
+                        <p>Every job comes with an electrical safety certificate and our workmanship guarantee. Sorted.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -257,7 +242,7 @@
         <div class="container">
             <div class="cta-banner__inner reveal-up">
                 <h2 class="cta-banner__title">Ready to Get <span class="text-gradient">Started?</span></h2>
-                <p class="cta-banner__text">Get a free, no-obligation quote for your electrical project. We cover all of Wellington and the Hutt Valley.</p>
+                <p class="cta-banner__text">Get a free, no-obligation quote for your electrical project.</p>
                 <div class="cta-banner__buttons">
                     <a href="contact.html" class="btn btn--primary btn--lg">
                         Get a Free Quote
@@ -286,15 +271,9 @@
                     </div>
                     <p>Wellington's trusted sparky — available 24/7. EWRB registered, Master Electricians NZ member. Keeping Wellington safe and powered up since 2010.</p>
                     <div class="footer__social">
-                        <a href="#" aria-label="Facebook" class="footer__social-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-                        </a>
-                        <a href="#" aria-label="Instagram" class="footer__social-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
-                        </a>
-                        <a href="#" aria-label="Google Business" class="footer__social-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-                        </a>
+                        <a href="#" aria-label="Facebook" class="footer__social-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+                        <a href="#" aria-label="Instagram" class="footer__social-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+                        <a href="#" aria-label="Google Business" class="footer__social-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></a>
                     </div>
                 </div>
                 <div class="footer__links">
